@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: Gray; /* Set your desired background color here */
+}
+
+button {
+  margin-top: 20px; /* Add some space below the heading */
+  background-color: Gray; /* Set your desired background color here */
+  color: white;
+}
+
+/* Style for the button container */
+.button-container {
+  position: relative; /* Set position to relative */
+}
+
+/* Style for button1 container */
+.button1-container {
+  position: fixed; /* Set position to fixed */
+  top: 0; /* Position from the top of the viewport */
+  left: 0; /* Position from the left of the viewport */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.button1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button1 {
+  color: white; /* Set the text color to white */
+  padding: 10px 20px; /* Add padding for better appearance */
+  text-decoration: none; /* Remove underline */
+  margin: 10px; /* Add margin for spacing */
+  cursor: pointer; /* Add pointer cursor on hover */
+}
+
+/* Style for button hover */
+.button1:hover {
+  background-color: #2980b9; /* Change background color on hover */
+}
+
+#gameboard {
+  width: 300px;
+  height: 300px;
+  background-color: lightgoldenrodyellow;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px black;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border: solid 4px black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 18px solid orange;
+  box-sizing: border-box;
+}
+
+.cross {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.cross:before,
+.cross:after {
+  content: '';
+  position: absolute;
+  background-color: rgb(237, 130, 146);
+}
+
+.cross:before {
+  left: 50%;
+  width: 30%;
+  height: 90px;
+  margin-left: -15%;
+}
+
+.cross:after {
+  top: 50%;
+  height: 30%;
+  width: 90px;
+  margin-top: -15%;
+}

@@ -14,7 +14,31 @@ button {
   background-color: Gray; /* Set your desired background color here */
   color: white;
 }
+/* Style for the button container */
+.button-container {
+  position: relative; /* Set position to relative */
+}
 
+/* Style for button1 container */
+.button1-container {
+  position: fixed; /* Set position to fixed */
+  top: 0; /* Position from the top of the viewport */
+  left: 0; /* Position from the left of the viewport */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.button1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button1 {
+  color: white; /* Set the text color to white */
+  padding: 10px 20px; /* Add padding for better appearance */
+  text-decoration: none; /* Remove underline */
+  margin: 10px; /* Add margin for spacing */
+  cursor: pointer; /* Add pointer cursor on hover */
+}
 #gameboard {
   width: 300px;
   height: 300px;

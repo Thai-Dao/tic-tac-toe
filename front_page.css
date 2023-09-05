@@ -19,3 +19,7 @@ button {
   background-color: Gray; /* Set your desired background color here */
   color: white;
 }
+
+button:hover {
+  background-color: #2980b9; /* Change background color on hover */
+}
