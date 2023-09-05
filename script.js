@@ -48,6 +48,7 @@ function checkScore() {
   let circleWins = false;
   let crossWins = false;
 
+  // Check for a winning combination
   winningCombos.forEach((array) => {
     if (
       array.every((cell) =>
@@ -66,12 +67,22 @@ function checkScore() {
     }
   });
 
+  // Check for a draw
+  const isBoardFull = [...allSquares].every(
+    (square) =>
+      square.firstChild?.classList.contains('circle') ||
+      square.firstChild?.classList.contains('cross')
+  );
+
   if (circleWins) {
     infoDisplay.textContent = 'Circle Wins!';
-    restartButton.style.display = 'block'; // Show the restart button
+    restartButton.style.display = 'block';
   } else if (crossWins) {
     infoDisplay.textContent = 'Cross Wins!';
-    restartButton.style.display = 'block'; // Show the restart button
+    restartButton.style.display = 'block';
+  } else if (isBoardFull) {
+    infoDisplay.textContent = "It's a Draw!";
+    restartButton.style.display = 'block';
   }
 }
 
